@@ -1,36 +1,82 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# pitcms Starter - Next.js Blog
 
-## Getting Started
+[pitcms](https://pitcms.net/) と Next.js で構築されたブログのスターターテンプレートです。
 
-First, run the development server:
+## 特徴
+
+- **Next.js 15** (App Router) + TypeScript
+- **Tailwind CSS v4** でスタイリング
+- **pitcms** で Git ベースのコンテンツ管理
+- **ISR** で自動的にコンテンツを更新
+- **お問い合わせフォーム** (pitcms フォーム機能)
+
+## セットアップ
+
+### 1. クローン＆インストール
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/your-username/pitcms-starter-nextjs.git
+cd pitcms-starter-nextjs
+pnpm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. 開発サーバーを起動
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+pnpm dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+http://localhost:3000 でブログが表示されます。
 
-## Learn More
+### 3. 記事を追加
 
-To learn more about Next.js, take a look at the following resources:
+`content/posts/` に Markdown ファイルを追加します:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```markdown
+---
+title: "記事タイトル"
+description: "記事の説明"
+publishedAt: "2025-01-20"
+isDraft: false
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+本文を Markdown で書きます。
+```
 
-## Deploy on Vercel
+### 4. pitcms と連携
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. [pitcms](https://app.pitcms.net/) にログイン
+2. GitHub App をインストールし、このリポジトリを連携
+3. pitcms のダッシュボードでコンテンツを編集
+4. 保存すると自動で GitHub にコミットされます
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### 5. お問い合わせフォーム
+
+`src/app/contact/page.tsx` の `YOUR_FORM_ID` を、pitcms ダッシュボードで作成したフォーム ID に置き換えてください。
+
+### 6. デプロイ
+
+Vercel にデプロイ:
+
+```bash
+pnpm build  # ローカルでビルド確認
+```
+
+Vercel にリポジトリをインポートすれば自動デプロイされます。
+
+## ディレクトリ構成
+
+```
+├── content/posts/         # ブログ記事 (Markdown)
+├── pitcms.jsonc           # pitcms 設定ファイル
+├── src/
+│   ├── app/               # Next.js App Router
+│   ├── components/        # React コンポーネント
+│   ├── lib/               # ユーティリティ
+│   └── types/             # TypeScript 型定義
+└── public/                # 静的ファイル
+```
+
+## ライセンス
+
+MIT

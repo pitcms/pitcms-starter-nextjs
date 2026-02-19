@@ -1,0 +1,69 @@
+{
+  "$schema": "https://pitcms.net/schema/pitcms.schema.json",
+  "schemaVersion": 1,
+  "collections": [
+    {
+      "name": "posts",
+      "label": "ブログ記事",
+      "description": "ブログに掲載する記事を管理します",
+      "path": "content/posts",
+      "extension": "md",
+      "fields": [
+        {
+          "name": "title",
+          "type": "text",
+          "label": "タイトル",
+          "required": true,
+          "maxLength": 100
+        },
+        {
+          "name": "description",
+          "type": "textarea",
+          "label": "説明文",
+          "required": true,
+          "maxLength": 300,
+          "ai": [
+            { "label": "要約する", "context": "テキストを3行以内に簡潔に要約してください" },
+            { "label": "SEO最適化", "context": "この説明文をSEOに最適化してください" }
+          ]
+        },
+        {
+          "name": "publishedAt",
+          "type": "date",
+          "label": "公開日",
+          "required": true
+        },
+        {
+          "name": "heroImage",
+          "type": "image",
+          "label": "アイキャッチ画像"
+        },
+        {
+          "name": "isDraft",
+          "type": "boolean",
+          "label": "下書き",
+          "default": false
+        },
+        {
+          "name": "content",
+          "type": "richtext",
+          "label": "本文",
+          "required": true
+        }
+      ],
+      "layout": [
+        ["title", "isDraft"],
+        ["publishedAt"],
+        ["description"],
+        ["heroImage"],
+        ["content"]
+      ],
+      "pit": {
+        "title": "title",
+        "createdAt": "publishedAt",
+        "draft": "isDraft",
+        "body": "content"
+      }
+    }
+  ]
+}
