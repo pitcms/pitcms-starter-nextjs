@@ -69,7 +69,7 @@ pitcms のダッシュボードの「設定」→「プレビュー」から Ver
 
 設定すると、pitcms は編集セッションで作られたブランチの Vercel デプロイを自動的に検出し、ダッシュボード上にプレビューリンクを表示します。公開前に変更内容を確認できるので、安心してコンテンツを編集できます。
 
-#### Vercel の Deployment Protection について
+### Vercel の Deployment Protection について
 
 Vercel にはプレビューデプロイへのアクセスを制限する **Deployment Protection** という機能があります。この機能が有効になっている場合、Vercel プロジェクトのチームメンバーでないユーザーはプレビュー URL にアクセスできません。
 
