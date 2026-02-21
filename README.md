@@ -2,7 +2,7 @@
 
 [pitcms](https://pitcms.net/) と Next.js で構築されたブログのスターターテンプレートです。
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/pitcms/nextjs-starter)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/pitcms/pitcms-starter-nextjs)
 
 ## 特徴
 
