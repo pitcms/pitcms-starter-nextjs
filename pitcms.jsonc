@@ -1,6 +1,10 @@
 {
   "$schema": "https://pitcms.net/schema/pitcms.schema.json",
   "schemaVersion": 1,
+  "media": {
+    "storagePath": "public/images",
+    "publicPath": "/images"
+  },
   "collections": [
     {
       "name": "posts",
