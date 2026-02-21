@@ -4,7 +4,7 @@ import { Footer } from "@/components/footer";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "My Blog - pitcms Starter",
+  title: "pitcms Blog - pitcms Starter",
   description: "A blog built with Next.js and pitcms",
 };
 

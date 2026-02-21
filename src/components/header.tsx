@@ -5,7 +5,7 @@ export function Header() {
     <header className="border-b border-gray-200">
       <div className="mx-auto max-w-3xl px-4 py-4 flex items-center justify-between">
         <Link href="/" className="text-xl font-bold text-gray-900">
-          My Blog
+          Next.js + pitcms Blog
         </Link>
         <nav className="flex gap-6 text-sm">
           <Link href="/blog" className="text-gray-600 hover:text-gray-900">

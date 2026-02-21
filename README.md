@@ -2,12 +2,14 @@
 
 [pitcms](https://pitcms.net/) と Next.js で構築されたブログのスターターテンプレートです。
 
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/pitcms/nextjs-starter)
+
 ## 特徴
 
 - **Next.js 15** (App Router) + TypeScript
 - **Tailwind CSS v4** でスタイリング
 - **pitcms** で Git ベースのコンテンツ管理
-- **ISR** で自動的にコンテンツを更新
+- **SSG** で完全な静的サイトを生成
 - **お問い合わせフォーム** (pitcms フォーム機能)
 
 ## セットアップ
@@ -52,7 +54,7 @@ isDraft: false
 
 ### 5. お問い合わせフォーム
 
-`src/app/contact/page.tsx` の `YOUR_FORM_ID` を、pitcms ダッシュボードで作成したフォーム ID に置き換えてください。
+`src/app/contact/page.tsx` の `FORM_ACTION` を、pitcms ダッシュボードで作成したフォームのエンドポイント URL に置き換えてください。
 
 ### 6. デプロイ
 

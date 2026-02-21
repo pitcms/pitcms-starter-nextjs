@@ -3,8 +3,6 @@ import { getAllPosts, getPostBySlug } from "@/lib/content";
 import { BlogMeta } from "@/components/blog/blog-meta";
 import type { Metadata } from "next";
 
-export const revalidate = 3600;
-
 export async function generateStaticParams() {
   const posts = getAllPosts();
   return posts.map((post) => ({ slug: post.slug }));
@@ -19,7 +17,7 @@ export async function generateMetadata({
   const post = await getPostBySlug(slug);
   if (!post) return {};
   return {
-    title: `${post.title} - My Blog`,
+    title: `${post.title} - pitcms Blog`,
     description: post.description,
   };
 }

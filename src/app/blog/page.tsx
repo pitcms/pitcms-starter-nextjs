@@ -3,7 +3,7 @@ import { BlogCard } from "@/components/blog/blog-card";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "ブログ - My Blog",
+  title: "ブログ - pitcms Blog",
   description: "ブログ記事一覧",
 };
 
